@@ -40,21 +40,12 @@
 
 ## 你先别急，怎么装
 
-先把仓库拉下来，再把 `changshu-anuo/` 丢进你的 skill 目录。
+先把仓库拉下来，再把 `changshu-anuo/` 丢进你自己的 skill 目录。
 
-### Codex
+- Codex: 放到你的 Codex skills 目录里
+- Claude Code: 放到你的 Claude skills 目录里
 
-```powershell
-Copy-Item -Recurse .\changshu-anuo "$env:USERPROFILE\.codex\skills\changshu-anuo"
-```
-
-### Claude Code
-
-```powershell
-Copy-Item -Recurse .\changshu-anuo ".\.claude\skills\changshu-anuo"
-```
-
-更快的上手流程看 [GETTING_STARTED.md](./GETTING_STARTED.md)。
+最终要保证能以 `$changshu-anuo` 显式调用到它就行。
 
 ## 你怎么用
 
@@ -121,8 +112,6 @@ $changshu-anuo 分析这事阿诺会怎么想、怎么说
 ```text
 changshu-anuo-skill/
 ├── README.md
-├── AGENTS.md
-├── GETTING_STARTED.md
 ├── LICENSE
 ├── .gitignore
 ├── examples/
@@ -144,7 +133,9 @@ changshu-anuo-skill/
 - 仅供角色扮演、风格研究、提示工程和娱乐用途
 - 请勿用于冒充、欺骗、骚扰或传播违法内容
 
-## 给协作者
+## 给维护者
 
-- 仓库级说明看 [AGENTS.md](./AGENTS.md)
-- 首次安装和验证看 [GETTING_STARTED.md](./GETTING_STARTED.md)
+- skill 主入口: `./changshu-anuo/SKILL.md`
+- 证据卡: `./changshu-anuo/references/evidence-cards.md`
+- 样本库: `./changshu-anuo/references/source_samples.md`
+- 构建脚本: `./changshu-anuo/scripts/build_skill.py`
