@@ -5,7 +5,7 @@
 这是一版适合 GitHub 公开分发的 `changshu-anuo` skill。
 
 - 安装目录在 [changshu-anuo](./changshu-anuo)
-- 开源版只放规范化证据卡、样本、规则、脚本和 benchmark
+- 公开版现在只放 skill 成品，不放内部制作工程
 - 原始素材、未清洗转写、临时调研，不进这个仓库
 
 ## 这到底是个什么
@@ -14,29 +14,28 @@
 
 这也不是把一堆脏转写、旧 prompt、二创梗图一股脑塞进去，然后让模型嗯学的那种东西。
 
-这个仓库想做的是一版能公开、能维护、能继续长的阿诺 skill：
+这个仓库想做的是一版能公开、能直接装、看起来还不乱的阿诺 skill：
 
 - 有 `语感核`
 - 有 `脑回路核`
 - 有 `扮演`
 - 有 `改写`
 - 有 `拆解`
-- 有负例
-- 有 benchmark
-- 有脚本
+- 该有的味道有
+- 该收住的地方也收住
 
 你要是只想找一句“那我问你”，那别急，这仓库不止那个。
 
 ## 这版有些什么
 
 - `语感核`
-  重复、回滚、反问、情绪推进、主场控制这些都单独拆出来了。
+  重复、回滚、反问、情绪推进、主场控制这些味道都还在。
 - `脑回路核`
-  反问防御、左右脑互搏、面子优先、流量优先、师承执念，不是乱写，是拆成模型在管。
+  反问防御、左右脑互搏、面子优先、流量优先、师承执念这些东西都被压进成品 skill 里了。
 - `三模式`
   `扮演`、`改写`、`拆解` 都能单独用。
-- `维护链`
-  有证据卡、有样本库、有规则层、有构建脚本，不是一次性 prompt。
+- `轻仓库`
+  GitHub 上只放精简发行物，不把内部做料工程全摊开。
 
 ## 你先别急，怎么装
 
@@ -57,7 +56,7 @@ $changshu-anuo 把这段话改成阿诺味
 $changshu-anuo 分析这事阿诺会怎么想、怎么说
 ```
 
-更多演示题看 [examples/demo-prompts.md](./examples/demo-prompts.md)。
+这几个就够你先试味道了。
 
 ## 这版怎么开的
 
@@ -81,31 +80,23 @@ $changshu-anuo 分析这事阿诺会怎么想、怎么说
 
 ## 这版和普通公共样品有什么不一样
 
-相对只放 `README + SKILL.md` 的轻量样品，这版额外公开了：
+说白了就是两点：
 
-- `persona + cognition + runtime` 三层拆分
-- `evidence-cards` 规范化证据卡
-- `evidence-matrix` 规则追溯
-- `negative-examples` 压制低质量模仿
-- `benchmark-prompts` 固定评测题库
-- `normalize_samples.py`
-- `build_skill.py`
-- `audit_skill_refs.py`
-- `version_manager.py`
+- 不是只会堆几句口头禅
+- 也不是把仓库做成一坨内部工程文档
 
-说白了就是：
+公开版现在只放成品 skill，但成品里保留了：
 
-- 不只会学几句
-- 不只会堆口头禅
-- 不直接吃脏原料
-- 后面还能继续补
+- `语感`
+- `脑回路`
+- `扮演 / 改写 / 拆解`
+- `边界控制`
 
-## 公开版证据策略
+## 公开版策略
 
-- skill 只消费规范化后的证据卡
-- 规则层只引用 `OBS-* / DER-* / BOR-*`
-- 原始素材留在本地，不进开源仓库
-- 新素材先清洗成证据卡，再进入样本库和规则层
+- GitHub 只放 skill 成品
+- 原始素材和内部制作工程留在本地
+- 所以仓库会更轻，也更接近大家平时看的那种开源 skill 样子
 
 ## 仓库结构
 
@@ -114,17 +105,10 @@ changshu-anuo-skill/
 ├── README.md
 ├── LICENSE
 ├── .gitignore
-├── examples/
-│   └── demo-prompts.md
 └── changshu-anuo/
     ├── SKILL.md
-    ├── persona.md
-    ├── cognition.md
-    ├── runtime.md
-    ├── agents/
-    ├── references/
-    ├── prompts/
-    └── scripts/
+    └── agents/
+        └── openai.yaml
 ```
 
 ## 你别乱传什么
@@ -135,7 +119,5 @@ changshu-anuo-skill/
 
 ## 给维护者
 
-- skill 主入口: `./changshu-anuo/SKILL.md`
-- 证据卡: `./changshu-anuo/references/evidence-cards.md`
-- 样本库: `./changshu-anuo/references/source_samples.md`
-- 构建脚本: `./changshu-anuo/scripts/build_skill.py`
+- 公开仓库只留发行物
+- 内部研究、清洗、构建、评测链不随公开仓库发出
