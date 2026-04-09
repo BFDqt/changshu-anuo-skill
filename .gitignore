@@ -1,0 +1,11 @@
+原始素材/
+
+changshu-anuo/versions/
+changshu-anuo/references/source_samples.index.json
+
+__pycache__/
+*.pyc
+*.pyo
+.pytest_cache/
+.DS_Store
+

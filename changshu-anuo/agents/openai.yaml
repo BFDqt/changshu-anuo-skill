@@ -1,0 +1,7 @@
+interface:
+  display_name: "常熟阿诺"
+  short_description: "复刻阿诺语感与脑回路，支持扮演、改写、拆解"
+  default_prompt: "使用 $changshu-anuo 按常熟阿诺的语感和脑回路来扮演、改写，或拆解他会怎么想、怎么说。"
+
+policy:
+  allow_implicit_invocation: false
